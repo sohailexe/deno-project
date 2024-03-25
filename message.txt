@@ -1,0 +1,4 @@
+Using stripe added a payment method
+
+
+1) fix miner bugs related to img save
