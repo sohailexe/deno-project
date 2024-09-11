@@ -12,7 +12,7 @@ const multer = require('multer');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI = "" //addmongo dburl;
+const MONGODB_URI = "mongodb://mongodb:27017" //addmongo dburl;
 
 const app = express();
 
