@@ -12,7 +12,14 @@ const multer = require('multer');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI = "mongodb://mongodb:27017" //addmongo dburl;
+// Read environment variables
+const username = process.env.MONGO_INITDB_ROOT_USERNAME || 'defaultuser';
+const password = process.env.MONGO_INITDB_ROOT_PASSWORD || 'defaultpassword';
+const host = 'mongodb';  // or use the actual host if different
+const port = '27017';
+
+// Construct the MongoDB URI
+const MONGODB_URI = `mongodb://${username}:${password}@${host}:${port}`;
 
 const app = express();
 
